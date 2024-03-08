@@ -21,21 +21,22 @@ public class RepasoController implements Initializable {
     private TextArea textoFinal;
     @FXML
     private TextField nombre;
+
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
     String[] genero = {"Hombre", "Fémina", "Los dos", "No se sabe", "Aún por determinar", "Soy un género jajaj", "Prefiero no responder"};
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    generocb.getItems().addAll(genero);
-    nombre.getText();
+        generocb.getItems().addAll(genero);
     }
 
     public void onEnviarClick() {
-        String genero=generocb.getValue();
-        textoFinal.setText(nombre);
-        textoFinal.setText(genero);
+        String genero = generocb.getValue();
+        String nombreP = nombre.getText();
+        textoFinal.setText(nombreP + "\n" + genero);
     }
 }
