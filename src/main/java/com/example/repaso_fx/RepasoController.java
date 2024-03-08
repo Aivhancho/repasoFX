@@ -40,6 +40,6 @@ public class RepasoController implements Initializable {
         String genero = generocb.getValue();
         String nombreP = nombre.getText();
         String descrip = descripcion.getText();
-        textoFinal.setText(descrip + "\n" + nombreP + "\n" + genero);
+        textoFinal.setText(descrip + "\n" + nombreP + "\n" + genero + "\n");
     }
 }
