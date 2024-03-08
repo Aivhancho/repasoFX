@@ -21,6 +21,8 @@ public class RepasoController implements Initializable {
     private TextArea textoFinal;
     @FXML
     private TextField nombre;
+    @FXML
+    private TextArea descripcion;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -37,6 +39,7 @@ public class RepasoController implements Initializable {
     public void onEnviarClick() {
         String genero = generocb.getValue();
         String nombreP = nombre.getText();
-        textoFinal.setText(nombreP + "\n" + genero);
+        String descrip = descripcion.getText();
+        textoFinal.setText(descrip + "\n" + nombreP + "\n" + genero);
     }
 }
